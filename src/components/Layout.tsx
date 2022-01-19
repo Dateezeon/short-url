@@ -33,15 +33,18 @@ const LayoutStyles = styled.div`
     margin: 20px 0;
   }
   .btn {
+    background-color: #0383b2;
+    border-color: #0383b2;
     font-weight: bold;
   }
 
   .Alert {
-    font-size: 12px;
+    font-size: 13px;
     text-align: center;
-    width: 70%;
     margin: auto;
     margin-bottom: 40px;
+    background-color: #8e9eba;
+    color: white;
   }
 `;
 
@@ -124,12 +127,16 @@ const Layout = () => {
             </FloatingLabel>
             <Button type="submit">Shorten URL</Button>
           </Form>
-          <div className="TableTitle">Your URLs</div>
-          <Table
-            data={urls}
-            columns={columns}
-            setFetch={setFetch}
-          />
+          {urls.length > 0 &&
+            <>
+              <div className="TableTitle">Your URLs</div>
+              <Table
+                data={urls}
+                columns={columns}
+                setFetch={setFetch}
+              />
+            </>
+          }
         </Body>
       </Card>
     </LayoutStyles>

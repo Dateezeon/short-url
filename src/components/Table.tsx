@@ -10,7 +10,7 @@ const TableStyles = styled.div`
 
   i {
     font-size: 20px;
-    color: red
+    color: #db6265;
   }
 
   a {
